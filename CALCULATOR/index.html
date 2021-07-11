@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Calculator</title>
+    <script src="script.js" defer></script> <!--using defer ,displays the html page then js works .Otherwise first js works then displays the html page-->
+    
+</head> 
+
+<body>
+    <h3> Calculator</h3>
+    <br/>
+    <style>
+        #calc {
+            width: 300px;
+            height: 250px;
+        }
+
+        .btn {
+            width: 96%;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+
+    <table id="calc">
+        <tr>
+            <td colspan="4"><input class="btn" name="display" id="inpt" type="text"></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type=button onclick="clearBox()" value="C"></td>
+            <td><input class="btn" type=button onclick="removeNumber()" value="<"></td>
+            <td><input class="btn" type=button onclick="displayNumber('/')" value="/"></td>
+            <td><input class="btn" type=button onclick="displayNumber('*')" value="X" ></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type=button onclick="displayNumber('7')" value="7" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('8')" value="8" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('9')" value="9" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('-')" value="-" ></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type=button onclick="displayNumber('4')" value="4" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('5')" value="5" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('6')" value="6" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('+')" value="+" ></td>
+        </tr>
+        <tr>
+            <td><input class="btn" type=button onclick="displayNumber('2')" value="2" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('3')" value="3" >
+            <td><input class="btn" type=button onclick="displayNumber('1')" value="1" ></td>
+            </td>
+            <td rowspan="2"><input class="btn" type=button value="=" onclick="evaluateExpression()" style="height: 82px!important;"></td>
+        </tr>
+        <tr>
+            <td colspan=2><input class="btn" type=button onclick="displayNumber('0')" value="0" ></td>
+            <td><input class="btn" type=button onclick="displayNumber('.')" value="." ></td>
+        </tr>
+    </table>
+</body>
+</html>
