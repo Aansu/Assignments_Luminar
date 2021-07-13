@@ -1,0 +1,21 @@
+body{
+background-image: url(bgimage.jpg); 
+background-repeat: no-repeat;
+width:50%;
+height:600px; 
+margin-left:711px;
+
+}
+#calc {
+    width: 400px;
+    height: 250px;
+}
+
+.btn {
+    width: 96%;
+    height: 40px;
+    font-size: 20px;
+}
+td{
+    
+}

@@ -1,16 +1,9 @@
 function populate(city){
-    
     let cityTemp=city.main.temp;
-
     let cityFeelsLike=city.main.feels_like;
-    
     let country=city.sys.country;
     let cityNamein=city.name;
-    
     let main=city.weather[0].main;
-    
-
-
     let html_data=`<div class="card" style="width: 18rem;">
 <div class="card-body">
 <h5 class="card-title">COUNTRY:${country}</h5>
