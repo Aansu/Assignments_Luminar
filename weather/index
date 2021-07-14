@@ -47,9 +47,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sign In</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,41 +58,44 @@
                                 <li><a class="dropdown-item" href="#">How to start</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <button class="btn" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: blue;">Find weather in your city</button>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Find Weather</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                 <div><input type="text" placeholder="Enter City Name" id="city_name"></div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" onclick="findWeather()">Find</button>
-                </div>
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col" id="result">
-        
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Weather Report</h5>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col" id="result">
+
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col"></div>
                 </div>
-              </div>
             </div>
         </div>
     </header>
 </div>
-<body style="background-color: black;">
-<img src="image.jpg" alt="" >
+
+<body>
+    <form>
+        <div class="mb-3">
+            <label for="city" class="form-label" style="color: whitesmoke;">Enter your City Name</label>
+            <input type="text" name="city" id="city_name" placeholder="City Name" required>
+        </div>
+        <button type="submit" class="btn btn-danger" onclick="findWeather()">Submit</button>
+    </form>
+
+
 </body>
 
 
