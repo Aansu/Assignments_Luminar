@@ -2,3 +2,15 @@
     background-image: url('images/index.jpg');
     width: 100%;
 } */
+.navbar{
+    background-color: skyblue;
+   
+}
+.homebg{
+    background-image: url("./images/home1.jpg");
+    
+    height: 625px;
+}
+.register{
+    background-image: url("./images/reg5.jpg");
+}

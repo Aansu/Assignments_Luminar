@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="bank.js" defer></script>
+    <link rel="stylesheet" href="bank.css">
+    <title>Bank Account</title>
+</head>
+<body class="homebg">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button class="btn" aria-current="page" onclick="balanceEnquiry()">View Balance</button>
+               <!--<a class="nav-link active" aria-current="page" href="javascript:balanceEnquiry()">View Balance</a>-->
+              </li>
+              <li class="nav-item">
+                <button class="btn" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal">Fund Transfer</button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Payment History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="javascript:logout()" id="litem"></a>
+              </li>
+              
+            
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Transfer Fund</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div><input type="text" placeholder="enter to acc no" id="toacno"></div>
+         <div><input type="text" placeholder="confirm to ac no" id="ctoano"></div>
+         <div><input type="text" placeholder="amount" id="amount"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="fundTransfer()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div  class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+            
+            </div>
+            <div class="col"></div>
+               
+            </div>
+        
+    </div>
+</body>
+</html>
