@@ -32,11 +32,11 @@ function login() {
             location.href="home.html";
         }
         else{
-            error.innerHTML="*please enter a valid password"
+            error.innerHTML="*Incorrect password"
         }
     }
     else{
-        error.innerHTML="*invalid username"
+        error.innerHTML="*incorrect username"
     }
     
 }
@@ -59,7 +59,7 @@ function logout(){
     sessionStorage.removeItem("user");
     location.href="login.html";
 }
-
+var hisArr=[];
 function fundTransfer(){
     let to_accno=toacno.value;
     let confirm_acno=ctoano.value;
@@ -79,6 +79,25 @@ function fundTransfer(){
             alert("Transaction completed");
         }
     }
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+    hisArr.push(confirm_acno,amt,logged_user.balance,today);
+    console.log(hisArr);
 }
-
+function cancel(){
+    location.href="index.html";
+}
+function paymentHistroy(){
+    alert("Showing payment history");
+      
+      
+    let html_data="";
+    for(var i=0; i <hisArr.length; i++){
+    html_data+=`<tr>${hisArr[0]}</tr>`
+    }
+    res.innerHTML=html_data;
+    
+}
 
